@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>performer-common</artifactId>
+
+    <parent>
+        <groupId>com.adarrivi</groupId>
+        <artifactId>performer-parent</artifactId>
+        <version>${performer.parent.version}</version>
+        <relativePath>../performer-parent/pom.xml</relativePath>
+    </parent>
+
+    <dependencies>
+        <!-- Logging -->
+        <!-- Abstract login that allow us to change the underlying logging implementation -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${org.slf4j.version}</version>
+        </dependency>
+        <!-- sfl4 to log4j adaptor -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${org.slf4j.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

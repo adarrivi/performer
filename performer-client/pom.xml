@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>performer-client</artifactId>
+    <version>${performer.client.version}</version>
+    <parent>
+        <groupId>com.adarrivi</groupId>
+        <artifactId>performer-parent</artifactId>
+        <version>${performer.parent.version}</version>
+        <relativePath>../performer-parent/pom.xml</relativePath>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.adarrivi</groupId>
+            <artifactId>performer-common</artifactId>
+            <version>${performer.common.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.adarrivi</groupId>
+            <artifactId>performer-common-test</artifactId>
+            <version>${performer.common-test.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>

@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.adarrivi</groupId>
+    <artifactId>performer-parent</artifactId>
+    <version>${performer.parent.version}</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <performer.parent.version>0.1</performer.parent.version>
+        <performer.common.version>0.1</performer.common.version>
+        <performer.common-test.version>0.1</performer.common-test.version>
+        <performer.client.version>0.1</performer.client.version>
+        <performer.server.version>0.1</performer.server.version>
+        <jdk.version>1.8</jdk.version>
+        <org.slf4j.version>1.7.7</org.slf4j.version>
+        <org.springframework.version>4.1.1.RELEASE</org.springframework.version>
+        <!--Testing dependencies -->
+        <junit.version>4.11</junit.version>
+        <mockito.version>1.9.5</mockito.version>
+        <sonar.language>java</sonar.language>
+    </properties>
+
+    <modules>
+        <module>../performer-common</module>
+        <module>../performer-common-test</module>
+        <module>../performer-client</module>
+        <module>../performer-server</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <!-- To set the proper jdk version in the classpath -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
+
+            <!-- Sonar Plugin for check project quality control-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>2.1</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
